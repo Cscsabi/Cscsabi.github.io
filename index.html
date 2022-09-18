@@ -4,13 +4,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Rock, paper, scissors</title>
   </head>
   <body>
-    <button id="rock" name="button">Rock</button>
-    <button id="paper" type="button">Paper</button>
-    <button id="scissors" type="button">Scissors</button>
-    <script src="index.js"></script>
+    <div id="game">
+      <h1 id="title">Rock Paper Scissors</h1>
+      <div id="scores">
+        <div class="player">
+          <h2>Player's score:</h2>
+          <h3 id="player-score">0</h3>
+        </div>
+        <div>
+          <h2>Computer's score:</h2>
+          <h3 id="computer-score">0</h3>
+        </div>
+      </div>
+
+      <div>Make your move!</div>
+
+      <div class="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+      </div>
+
+      <div>Computer chose: </div>
+      <div id="computer-choice"></div>
+
+      <div id="result-text">HE</div>
+
+      <button id="reload-button">Reset</button>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

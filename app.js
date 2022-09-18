@@ -1,6 +1,7 @@
 const play = () => {
   const playerScoreText = document.getElementById("player-score");
   const computerScoreText = document.getElementById("computer-score");
+  const computerChoiceText = document.getElementById("computer-choice");
   const resultText = document.getElementById("result-text");
   const rockButton = document.getElementById("rock");
   const paperButton = document.getElementById("paper");
@@ -14,32 +15,33 @@ const play = () => {
     playerChoice.forEach((player) => {
       player.addEventListener("click", function () {
         const computer = computerChoice[Math.floor(Math.random() * 3)];
-        checkWhoWon(this.innerText, computer);
+        computerChoiceText.textContent = capitalize(computer);
+        checkWhoWon(this.innerText.toLowerCase(), computer);
       });
     });
   };
 
-  const checkWhoWon = (playerChoice, computerChoice) => {
-    if (playerChoice === "rock") {
-      if (computerChoice === "paper") {
-        computerWon();
-      } else {
-        playerWon();
-      }
-    } else if (playerChoice === "paper") {
-      if (computerChoice === "rock") {
-        playerWon();
-      } else {
-        computerWon();
-      }
-    } else if (playerChoice === "scissors") {
-      if (computerChoice === "rock") {
-        computerWon();
-      } else {
-        playerWon();
-      }
-    } else if (playerChoice === computerChoice) {
+  const checkWhoWon = (player, computer) => {
+    if (player === computer) {
       resultText.textContent = "Tie!";
+    } else if (player === "rock") {
+      if (computer === "paper") {
+        computerWon();
+      } else {
+        playerWon();
+      }
+    } else if (player === "paper") {
+      if (computer === "rock") {
+        playerWon();
+      } else {
+        computerWon();
+      }
+    } else if (player === "scissors") {
+      if (computer === "rock") {
+        computerWon();
+      } else {
+        playerWon();
+      }
     }
   };
 
@@ -62,7 +64,16 @@ const play = () => {
     computerScoreText.textContent = computerScore;
 
     // TODO: Picture reset
+
+    play();
   };
+
+  buttonPressed();
+};
+
+const capitalize = (str) => {
+  const lower = str.toLowerCase();
+  return str.charAt(0).toUpperCase() + lower.slice(1);
 };
 
 play();
