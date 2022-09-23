@@ -1,0 +1,43 @@
+* {
+  text-align: center;
+  font-family: helvetica;
+}
+
+.buttons > button {
+  display: inline-block;
+  justify-content: space-between;
+  height: 300px;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+  width: 300px;
+  font-size: 0;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 20%;
+}
+
+button:hover {
+  background-color: green;
+}
+
+#rock,
+#paper,
+#scissors,
+img {
+  height: 200px;
+  width: 200px;
+}
+
+div > h2 {
+  display: inline-block;
+}
+
+.computer-options > img {
+  rotate: 180deg;
+}
+
+h1 {
+  font-family: helvetica;
+}
