@@ -3,10 +3,10 @@ const play = () => {
   const playerScoreText = document.getElementById("player-score");
   const computerScoreText = document.getElementById("computer-score");
   const computerChoiceText = document.getElementById("computer-choice");
-  const computerOptions = [
-    document.getElementById("computer-rock"),
-    document.getElementById("computer-paper"),
-    document.getElementById("computer-scissors"),
+  const computerDivOptions = [
+    document.getElementById("computer-rock-div"),
+    document.getElementById("computer-paper-div"),
+    document.getElementById("computer-scissors-div"),
   ];
 
   let previousComputerChoice = null;
@@ -99,24 +99,24 @@ const play = () => {
 
   const highlightComputersChoice = (computer) => {
     if (computer === "rock") {
-      computerOptions[0].style.backgroundColor = "red";
-      previousComputerChoice = computerOptions[0];
+      computerDivOptions[0].style.backgroundColor = "red";
+      previousComputerChoice = computerDivOptions[0];
     } else if (computer === "paper") {
-      computerOptions[1].style.backgroundColor = "red";
-      previousComputerChoice = computerOptions[0];
+      computerDivOptions[1].style.backgroundColor = "red";
+      previousComputerChoice = computerDivOptions[1];
     } else {
-      computerOptions[2].style.backgroundColor = "red";
-      previousComputerChoice = computerOptions[0];
+      computerDivOptions[2].style.backgroundColor = "red";
+      previousComputerChoice = computerDivOptions[2];
     }
   };
 
   const getComputersButton = (computer) => {
     if (computer === "rock") {
-      return computerOptions[0];
+      return computerDivOptions[0];
     } else if (computer === "paper") {
-      return computerOptions[1];
+      return computerDivOptions[1];
     } else {
-      return computerOptions[2];
+      return computerDivOptions[2];
     }
   };
 

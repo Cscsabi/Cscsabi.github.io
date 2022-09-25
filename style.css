@@ -3,14 +3,15 @@
   font-family: helvetica;
 }
 
+body {
+  background-image: url(background.jpg);
+}
+
 .buttons > button {
   display: inline-block;
-  justify-content: space-between;
-  height: 300px;
+  height: 10rem;
   padding: 0;
-  margin: 0;
-  vertical-align: top;
-  width: 300px;
+  width: 10rem;
   font-size: 0;
   border: none;
   cursor: pointer;
@@ -18,26 +19,52 @@
   border-radius: 20%;
 }
 
-button:hover {
+.buttons > button:hover {
   background-color: green;
 }
 
-#rock,
-#paper,
-#scissors,
-img {
-  height: 200px;
-  width: 200px;
+button > img {
+  height: 80%;
+  width: 80%;
+  margin-right: 10px;
+  transform: translateX(5%);
 }
 
 div > h2 {
   display: inline-block;
 }
 
-.computer-options > img {
+.computer-options > div {
   rotate: 180deg;
+  border-radius: 20%;
+  height: 10rem;
+  width: 10rem;
+  display: inline-block;
+  margin-right: 10px;
+  text-align: center;
+}
+
+div > img {
+  height: 80%;
+  width: 80%;
+  display: inline-block;
+  margin: auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 h1 {
   font-family: helvetica;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold !important;
+}
+
+#reset-button {
+  height: 5rem;
+  width: 10rem;
 }
